@@ -9,9 +9,9 @@
 
 import UIKit
 
-private final class SceneConfiguration<DependencyProvider: SceneDependencyProviding>: UISceneConfiguration {
+public final class SceneConfiguration<DependencyProvider: SceneDependencyProviding>: UISceneConfiguration {
 
-    init(sceneSession: UISceneSession) {
+    public init(sceneSession: UISceneSession) {
         super.init(name: nil, sessionRole: sceneSession.role)
 
         self.delegateClass = SceneDelegate<DependencyProvider>.self

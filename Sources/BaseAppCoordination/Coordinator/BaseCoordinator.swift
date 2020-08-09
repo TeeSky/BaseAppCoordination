@@ -9,7 +9,7 @@
 
 import UIKit
 
-protocol NavigationController: UIViewController {
+public protocol NavigationController: UIViewController {
 
     var interactivePopGestureRecognizer: UIGestureRecognizer? { get }
 
@@ -19,7 +19,7 @@ protocol NavigationController: UIViewController {
     func setNavigationBarHidden()
 }
 
-protocol BaseCoordinator {
+public protocol BaseCoordinator {
     associatedtype Dependencies
 
     init(navigationController: NavigationController, dependencies: Dependencies)
@@ -29,19 +29,19 @@ protocol BaseCoordinator {
 
 extension UINavigationController: NavigationController {
 
-    func pushViewController(_ viewController: UIViewController) {
+    public func pushViewController(_ viewController: UIViewController) {
         pushViewController(viewController, animated: true)
     }
 
-    func popViewController() {
+    public func popViewController() {
         popViewController(animated: true)
     }
 
-    func popToRootViewController() {
+    public func popToRootViewController() {
         popToRootViewController(animated: true)
     }
 
-    func setNavigationBarHidden() {
+    public func setNavigationBarHidden() {
         setNavigationBarHidden(true, animated: false)
     }
 }

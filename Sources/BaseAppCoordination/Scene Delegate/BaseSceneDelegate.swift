@@ -9,7 +9,7 @@
 
 import UIKit
 
-protocol SceneDelegateProtocol: UIResponder, UIWindowSceneDelegate {
+public protocol SceneDelegateProtocol: UIResponder, UIWindowSceneDelegate {
 
     func windowDidLoad(_ window: UIWindow)
 }

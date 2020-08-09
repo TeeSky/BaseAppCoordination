@@ -9,11 +9,11 @@
 
 import UIKit
 
-class BaseViewController<ScreenView: BaseScreenView>: UIViewController {
+open class BaseViewController<ScreenView: BaseScreenView>: UIViewController {
 
-    var screenView: ScreenView? { view as? ScreenView }
+    public var screenView: ScreenView? { view as? ScreenView }
 
-    override func loadView() {
+    override public func loadView() {
         view = ScreenView()
         screenView?.setupSubviews()
     }

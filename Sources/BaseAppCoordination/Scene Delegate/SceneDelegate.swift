@@ -9,11 +9,11 @@
 
 import UIKit
 
-final class SceneDelegate<DependencyProvider: SceneDependencyProviding>: BaseSceneDelegate {
+public final class SceneDelegate<DependencyProvider: SceneDependencyProviding>: BaseSceneDelegate {
 
     let dependencyProvider = DependencyProvider()
 
-    override func windowDidLoad(_ window: UIWindow) {
+    override public func windowDidLoad(_ window: UIWindow) {
         super.windowDidLoad(window)
 
         window.rootViewController = dependencyProvider.makeRootViewController()

@@ -6,11 +6,15 @@
 //  Copyright © 2020 Tomas Skypala. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
-protocol WindowSceneHandling {
+public protocol WindowSceneHandling {
 
     func windowWillBecomeVisible(_ window: UIWindow)
 
     func windowDidBecomeVisible(_ window: UIWindow)
 }
+
+#endif

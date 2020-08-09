@@ -9,7 +9,7 @@
 
 import UIKit
 
-protocol BaseScreenView: UIView {
+public protocol BaseScreenView: UIView {
 
     func setupSubviews()
 }
